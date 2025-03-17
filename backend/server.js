@@ -1,3 +1,4 @@
+// Comments are purely for personal reference
 const express = require('express');
 const fs = require('fs');
 const cors = require('cors');
