@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "name": "Sample Data 1",
+    "info": "This is a test entry."
+  },
+  {
+    "id": 2,
+    "name": "Sample Data 2",
+    "info": "Another test entry."
+  },
+  {
+    "id": 3,
+    "name": "New Data from Curl"
+  }
+]
+
