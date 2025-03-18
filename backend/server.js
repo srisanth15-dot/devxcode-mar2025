@@ -32,7 +32,30 @@ app.post('/api/data', (req, res) => {
 
 // Put (to update data)
 app.put('/api/data', (req, res) => {
+    const id = parseInt(req.param.Id);
+    const updateData = req.body;
 
+    const index = data.findIndex(item => item.id == id);
+
+    if (index == -1) {
+        return res.json({ message: "id not found" })
+    }
+    data[index] = [...data[index], ...updateData];
+    fs.writeFileSync('data.json', JSON.stringify(data, null, 2));
+    res.json({ message: "data successfully updated" });
+});
+
+// DEL (to delete data)
+app.delete('/api/data', (req, res) => {
+    const id = parseInt(req.params.id);
+    const filtdata = data.filter(item => item.id != id);
+
+    if (filtdata.length == data.length) {
+        return res.json({ message: "data not found" });
+    }
+
+    fd.writeFileSync('data.json', JSON.stringify(data, null, 2));
+    res.json({ message: "data successfully deleted" });
 });
 
 // To start server
