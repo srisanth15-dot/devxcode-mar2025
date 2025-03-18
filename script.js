@@ -10,6 +10,26 @@ window.addEventListener('scroll', () => {
     cloudBottom.style.transform = `translateX(${-scrollY * 0.5}px)`;
   });
 
+    let lastScrollPosition = 0;
+    const sliderText = document.querySelector(".slider-text");
+
+    window.addEventListener("scroll", () => {
+      const scrollPosition = window.scrollY;
+
+      // Calculate the difference in scroll position
+      const scrollDelta = scrollPosition - lastScrollPosition;
+
+      // Update the text's position based on scroll direction
+      const currentLeft = parseFloat(getComputedStyle(sliderText).left) || 0;
+      const newLeft = currentLeft + scrollDelta * 1.5; // Increased multiplier for faster movement
+
+      // Apply the new position
+      sliderText.style.left = `${newLeft}px`;
+
+      // Update the last scroll position
+      lastScrollPosition = scrollPosition;
+    });
+  
 
 
 

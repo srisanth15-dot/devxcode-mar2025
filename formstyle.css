@@ -1,0 +1,69 @@
+body{
+    background-image: url(images/paris-3325278_1280.jpg);
+    background-attachment: fixed;
+}
+.form-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 500px;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+    backdrop-filter: blur(8px); /* Blur effect */
+    -webkit-backdrop-filter: blur(8px); /* For Safari support */
+    border-radius: 25px; /* Rounded corners */
+    padding: 2rem; /* Padding inside the form */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Light border for contrast */
+}
+
+.form-container .logo {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff; /* White text color */
+    margin-bottom: 1.5rem;
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container label {
+    color: #fff; /* White text color for labels */
+    margin-bottom: 0.5rem;
+}
+
+.form-container input,
+.form-container textarea {
+    padding: 10px;
+    margin-bottom: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Light border for inputs */
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background for inputs */
+    color: #fff; /* White text color for inputs */
+    font-size: 1rem;
+}
+
+.form-container input::placeholder,
+.form-container textarea::placeholder {
+    color: rgba(255, 255, 255, 0.5); /* Light placeholder text */
+}
+
+.form-container input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Green submit button */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.form-container input[type="submit"]:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
